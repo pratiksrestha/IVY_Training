@@ -6,8 +6,6 @@ public class PalindromeString {
                     System.out.print(sample_string.charAt(i));
          }
          static int LongestPalindrome(String sample_string){
-             int n = sample_string.length();
-
              int maxLength = 1, start = 0;
 
              for (int i = 0; i < sample_string.length(); i++){
@@ -32,7 +30,7 @@ public class PalindromeString {
          }
 
             public static void main(String[] args){
-                String sample_string = new String();
+                String sample_string;
                 Scanner s = new Scanner(System.in);
                 System.out.println("Enter the string to extract the longest palindrome substring:");
                 sample_string = s.next();

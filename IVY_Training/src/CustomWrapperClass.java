@@ -1,6 +1,6 @@
-public class CustomWrapperClass {
+class CustomWrapper {
         private int i;
-        CustomWrapperClass(int i){
+        CustomWrapper(int i){
             this.i=i;
         }
         public int getValue(){
@@ -13,11 +13,14 @@ public class CustomWrapperClass {
         public String toString() {
             return Integer.toString(i);
         }
+}
 
-        //Testing the custom wrapper class
-        public static void main(String[] args){
-            CustomWrapperClass j=new CustomWrapperClass(10);
-            System.out.println(j);
-            System.out.println(((Object)j).getClass().getSimpleName());
-        }
+
+
+public class CustomWrapperClass{
+    public static void main(String[] args){
+        CustomWrapper j=new CustomWrapper(10);
+        System.out.println(j);
+        System.out.println(((Object)j).getClass().getSimpleName());
+    }
 }
