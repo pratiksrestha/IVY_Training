@@ -1,35 +1,34 @@
 import java.util.*;
 
 public class Permutation {
-    static List<Integer> nextPermutation(int n, int nums[]){
-        // code here
+    static List<Integer> nextPermutation(int size, int numbers[]){
         List<Integer>al=new ArrayList<>();
-        if(nums.length<=1 || nums==null) return al;
+        if(numbers.length<=1 || numbers==null) return al;
 
-        int i=nums.length-2;
-        while(i>=0 && nums[i]>=nums[i+1]) i--;
+        int i=numbers.length-2;
+        while(i>=0 && numbers[i]>=numbers[i+1]) i--;
 
         if(i>=0){
-            int j=nums.length-1;
-            while(nums[j]<=nums[i]) j--;
-            swap(nums,i,j);
+            int j=numbers.length-1;
+            while(numbers[j]<=numbers[i]) j--;
+            swap(numbers,i,j);
         }
 
-        reverse(nums,i+1,nums.length-1);
-        for(int h:nums){
+        reverse(numbers,i+1,numbers.length-1);
+        for(int h:numbers){
             al.add(h);
         }
         return al;
     }
 
-    public static void swap(int a[], int l, int r){
-        int temp=a[l];
-        a[l]=a[r];
-        a[r]=temp;
+    public static void swap(int numbers[], int left, int right){
+        int temp=numbers[left];
+        numbers[left]=numbers[right];
+        numbers[right]=temp;
     }
-    public static void reverse(int a[],int i,int j){
+    public static void reverse(int numbers[],int i,int j){
         while(i<j){
-            swap(a,i++,j--);
+            swap(numbers,i++,j--);
         }
     }
     public static void main(String[] args) {
@@ -39,7 +38,7 @@ public class Permutation {
         size=s.nextInt();
         System.out.println("enter the values of the sample: ");
         int[] numbers=new int[size];
-        List permutated_number= new ArrayList();
+        List permutated_number;
         for(int i=0; i<size; i++){
             numbers[i]=s.nextInt();
         }
