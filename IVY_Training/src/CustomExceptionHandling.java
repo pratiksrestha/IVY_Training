@@ -1,3 +1,5 @@
+//WAP to create your own exception class and show the usage of throw and throws keywords as well as try catch finally block
+
 class InvalidIdNumberException  extends Exception
 {
     public InvalidIdNumberException (String str)

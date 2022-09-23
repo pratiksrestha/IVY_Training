@@ -3,13 +3,13 @@ public class GenericMethodDemo {
         for(T item:arr){
             System.out.println("Items in array are "+item);
         }
-        System.out.println("The other datatype number is "+name);
+        System.out.println("The other datatype is "+name);
     }
 
     public static void main(String[] args){
 //        String[] arr={"one", "two", "three"};
 //        char anyChar = 'R';
-        Integer []arr={1,2,3,4,5};
+        String []arr={"hello","hi","how","are","you"};
         String anyChar="Pratik";
         GenericMethodDemo obj=new GenericMethodDemo();
         obj.genericsMethod(arr, anyChar);
